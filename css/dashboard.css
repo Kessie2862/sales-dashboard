@@ -1,0 +1,273 @@
+/* ==== NAVIGATION ==== */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, p {
+  font-family: Philosopher;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background: #3fb8b5;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header .logo {
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    float: left;
+    font-weight: bold;
+    font-family: Philosopher;
+}
+
+header .logo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-family: philosopher;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color:#fff;
+    background: #b8e1e436;
+}
+
+.menu-toggle {
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 991px)
+{
+    header {
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: calc (100vh - 50px);
+        background: #3fb8b5;
+        top: 50px;
+        left: -100%;
+        transition: 0.5s;
+    }
+    
+    header nav.active {
+        left: 0;
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul a {
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+}
+
+/* ==== HOMEPAGE ==== */
+
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    line-height: 1.9;
+}
+
+#container {
+    background-image: url('https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-size: cover;
+    background-position: center; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#container h1 {
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+#container p {
+    font-size: 20px;
+}
+
+#container .button {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: all .2s ease-in-out;
+    font-size: 1.5rem;
+}
+
+#container .button:hover {
+    background: black;
+    color: blanchedalmond;
+}
+
+/* ==== FOOTER ==== */
+
+footer {
+  background: #16222A;
+  background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
+  background: linear-gradient(59deg, #3A6073, #16222A);
+  color: white;
+  margin-top:100px;
+}
+
+footer a {
+  color: #fff;
+  font-size: 14px;
+  transition-duration: 0.2s;
+}
+
+footer a:hover {
+  color: #FA944B;
+  text-decoration: none;
+}
+
+.copy {
+  font-size: 12px;
+  padding: 10px;
+  border-top: 1px solid #FFFFFF;
+}
+
+.footer-middle {
+  padding-top: 2em;
+  color: white;
+}
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+
+.social-network a.icoFacebook:hover {
+  background-color: #3B5998;
+}
+
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+
+.social-network a.icoFacebook:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+
+.social-network a.socialIcon:hover,
+.socialHoverClass {
+  color: #44BCDD;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-circle i {
+  color: #595959;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.social-network a {
+  background-color: #F9F9F9;
+}
+
+
+
+
+
+
+
+
